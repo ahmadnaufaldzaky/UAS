@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RasaNusantara - Warisan Kuliner Indonesia</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #e74c3c;
+            --secondary: #f39c12;
+            --dark: #2c3e50;
+            --light: #ecf0f1;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .navbar-brand {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.8rem;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("images/Gambartugas/Backroundweb.jpg");
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            padding: 10px 25px;
+            font-weight: 600;
+        }
+        
+        .food-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            margin-bottom: 30px;
+            background: white;
+        }
+        
+        .food-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .food-card img {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+        
+        .food-card .card-body {
+            padding: 20px;
+        }
+        
+        .food-card h3 {
+            font-family: 'Playfair Display', serif;
+            color: var(--dark);
+        }
+        
+        .price {
+            color: var(--primary);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 40px 0;
+        }
+        
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            position: relative;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--primary);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">RasaNusantara</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resep">Resep</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tentang">Tentang</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#kontak">Kontak</a>
+                    </li>
+                </ul>
+                <div class="ms-3 d-flex align-items-center">
+                    <a href="#" class="btn btn-outline-dark me-2"><i class="fas fa-shopping-cart"></i></a>
+                    <a href="#" class="btn btn-primary">Pesan Sekarang</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Warisan Kuliner Nusantara</h1>
+            <p class="lead mb-4">Jelajahi kelezatan autentik dari seluruh penjuru Indonesia</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control form-control-lg" placeholder="Cari makanan tradisional...">
+                        <button class="btn btn-primary" type="button"><i class="fas fa-search"></i> Cari</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resep Section -->
+    <section id="resep" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Resep Tradisional</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="food-card">
+                        <img src="images/Gambartugas/Rendang Padang.jpg" alt="Rendang">
+                        <div class="card-body">
+                            <h3>Rendang Padang</h3>
+                            <p>Resep asli Minangkabau dengan bumbu rempah lengkap dan teknik memasak yang tepat.</p>
+                            <a href="#" class="btn btn-outline-primary">Lihat Resep</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="food-card">
+                        <img src="images/Gambartugas/Gudeg Jogjaa.jpg" alt="Gudeg">
+                        <div class="card-body">
+                            <h3>Gudeg Jogja</h3>
+                            <p>Gudeg khas Yogyakarta yang dimasak dengan santan dan bumbu khusus selama berjam-jam.</p>
+                            <a href="#" class="btn btn-outline-primary">Lihat Resep</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="food-card">
+                        <img src="images/Gambartugas/Soto Betawi.jpg" alt="Soto">
+                        <div class="card-body">
+                            <h3>Soto Betawi</h3>
+                            <p>Soto khas Jakarta dengan kuah santan yang gurih dan daging sapi yang lembut.</p>
+                            <a href="#" class="btn btn-outline-primary">Lihat Resep</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-primary">Lihat Semua Resep</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Pesan Makanan</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="food-card">
+                        <img src="images/Gambartugas/Rendang Padang.jpg" alt="Rendang">
+                        <div class="card-body">
+                            <h3>Rendang Padang</h3>
+                            <p>Daging sapi dimasak dengan bumbu rempah khas Minang.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">Rp 45.000</span>
+                                <button class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Pesan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="food-card">
+                        <img src="images/Gambartugas/Nasi Gudeg.jpg" alt="Gudeg">
+                        <div class="card-body">
+                            <h3>Nasi Gudeg</h3>
+                            <p>Nasi dengan gudeg, ayam, telur, dan sambal krecek.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">Rp 35.000</span>
+                                <button class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Pesan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="food-card">
+                        <img src="images/Gambartugas/Sate Madura.jpg" alt="Sate">
+                        <div class="card-body">
+                            <h3>Sate Madura</h3>
+                            <p>Sate ayam dengan bumbu kacang khas Madura.</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="price">Rp 30.000</span>
+                                <button class="btn btn-primary btn-sm"><i class="fas fa-plus"></i> Pesan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-4">
+                <a href="#" class="btn btn-primary">Lihat Menu Lengkap</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="tentang" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <h2 class="section-title text-start">Tentang Kami</h2>
+                    <p>RasaNusantara hadir untuk melestarikan dan mempopulerkan kuliner tradisional Indonesia. Kami menyajikan resep autentik dari berbagai daerah di Indonesia dan memberikan kemudahan untuk memesan makanan khas nusantara.</p>
+                    <p>Dengan menggunakan bahan-bahan berkualitas dan teknik memasak yang tepat, kami menjamin keaslian rasa setiap hidangan yang kami sajikan.</p>
+                    <a href="#" class="btn btn-outline-primary">Baca Selengkapnya</a>
+                </div>
+                <div class="col-md-6">
+                    <img src="images/Gambartugas/rempahrempah.jpg" alt="About Us" class="img-fluid rounded" >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-5 bg-primary text-white">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8 text-center">
+                    <h2 class="mb-4">Dapatkan Resep Eksklusif</h2>
+                    <p class="mb-4">Berlangganan newsletter kami untuk mendapatkan resep tradisional langka langsung ke email Anda.</p>
+                    <div class="row justify-content-center">
+                        <div class="col-md-8">
+                            <div class="input-group mb-3">
+                                <input type="email" class="form-control" placeholder="Alamat email Anda">
+                                <button class="btn btn-dark" type="button">Berlangganan</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="kontak">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h3 class="text-white mb-4">RasaNusantara</h3>
+                    <p>Melestarikan warisan kuliner Indonesia melalui resep autentik dan hidangan berkualitas.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#" class="text-white me-3"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-white"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <h4 class="text-white mb-4">Menu</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-white-50">Beranda</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Resep</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Pesan Makanan</a></li>
+                        <li class="mb-2"><a href="#" class="text-white-50">Tentang Kami</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4 class="text-white mb-4">Kontak</h4>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> Jakarta, Indonesia</li>
+                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +62 123 4567 890</li>
+                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@rasanusantara.com</li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h4 class="text-white mb-4">Jam Operasional</h4>
+                    <ul class="list-unstyled text-white-50">
+                        <li class="mb-2">Senin-Jumat: 9.00-21.00</li>
+                        <li class="mb-2">Sabtu-Minggu: 10.00-20.00</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4 bg-secondary">
+            <div class="row">
+                <div class="col-md-6">
+                    <p class="text-white-50">&copy; 2023 RasaNusantara. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="#" class="text-white-50 me-3">Kebijakan Privasi</a>
+                    <a href="#" class="text-white-50">Syarat & Ketentuan</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
